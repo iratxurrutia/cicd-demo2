@@ -1,0 +1,17 @@
+name: Análisis de Calidad
+on: push
+
+jobs:
+  analisis:
+    runs-on: ubuntu-latest
+    permissions:
+      security-events: write # Necesario para subir el reporte de seguridad
+    steps:
+      - name: Descargar código
+        uses: actions/checkout@v4
+
+      # Usamos la acción que pide la diapositiva
+      - name: Analizar código con Pylint
+        uses: advanced-security/python-lint-code-scanning-action@v1
+        with:
+          linter: pylint
