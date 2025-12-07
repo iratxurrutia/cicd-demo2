@@ -22,3 +22,5 @@ jobs:
         with:
           push: true
           tags: iratxurrutia/holamundo
+      - name: Probar contenedor Docker
+        run: docker run iratxurrutia/holamundo
