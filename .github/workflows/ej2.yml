@@ -1,4 +1,4 @@
-name: Análisis de Calidad
+name: Ejercicio 2
 on: push
 
 jobs:
