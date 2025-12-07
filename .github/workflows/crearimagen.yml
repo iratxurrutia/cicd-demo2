@@ -1,0 +1,17 @@
+name: Crear imagen
+
+on: push
+
+jobs:
+  validar:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Mostrar mensaje
+        run: echo "Hola mundo"
+      - name: Bajar codigo
+        uses: actions/checkout@v5
+      - name: Crear imagen Docker
+        run: docker build -t iratxurrutia/holamundo .
+      - name: Probar contenedor Docker
+        run: docker run iratxurrutia
